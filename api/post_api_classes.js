@@ -1,17 +1,4 @@
-// Auto-generated wrapper for route POST /api/classes
-// Original file: THATOO/backend/server.js
-module.exports = async (req, res) => {
-  try {
-    const orig = require('../THATOO/backend/server.js');
-    if (typeof orig === 'function') return orig(req,res);
-    if (orig && typeof orig.handler === 'function') return orig.handler(req,res);
-    res.status(200).json({
-      message: 'Generated wrapper for POST /api/classes.',
-      note: 'Please adapt the original Express route to export a handler(req,res).',
-      originalFile: 'THATOO/backend/server.js'
-    });
-  } catch (err) {
-    console.error('Wrapper error:', err);
-    res.status(500).json({ error: String(err) });
-  }
-};
+export default async function handler(req, res) {
+  // Demo: creates a mock class
+  res.status(200).json({ success: true, class: "NewClass", message: "Class created!" });
+}
